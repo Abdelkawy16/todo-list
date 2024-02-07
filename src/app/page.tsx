@@ -1,11 +1,14 @@
 import Todo from "@/components/todo";
 
 export default function Home() {
+  const todos = [
+    {title:"Test", info:"Test info!"},
+    {title:"Hello", info:"Hello info!"},
+  ]
   return (
     <div>
       <h1>My Todos</h1>
-      <Todo title="Test" info="Hello Test!"/>
-      <Todo/>
+      {todos.map(x=> <Todo title={x.title} info={x.info}/>)}
     </div>
   );
 }
